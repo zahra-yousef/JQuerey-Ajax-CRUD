@@ -209,12 +209,12 @@
 
             var stud_id = $(this).val();
             // console.log(stud_id);
-            $('#').modal('show');
+            $('#EditStudentModal').modal('show');
             $.ajax({
                 type: "GET",
                 url: "/edit-student/" + stud_id,
                 success: function (response) {
-                    // console.log(response);
+                    console.log(response);
                     if(response.status == 404){
                         $('#success_message').html("");
                         $('#success_message').addClass('alert alert-danger');
